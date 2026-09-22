@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hackkon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-6">
+
+    <div class="text-center mb-10">
+        <h1 class="text-5xl font-bold mb-4 py-2 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+        ค้นหาเกมทั่วโลก
+        </h1>
+        <p class="text-gray-400">รวบรวมโปรเจกต์และข้อมูลเกมจากฐานข้อมูลระดับโลก</p>
+    </div>
+
+    <div class="w-full max-w-2xl flex gap-2">
+        <input type="text" id="searchInput" 
+            placeholder="พิมพ์ชื่อเกมที่อยากหา..." 
+            class="w-full p-4 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+        
+        <button id="searchButton" 
+            class="px-8 py-4 bg-blue-600 hover:bg-blue-500 rounded-2xl font-semibold transition-colors">
+            ค้นหา
+        </button>
+    </div>
+            <div id="gameResults" class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+    </div>
+
+    <div id="paginationControls" class="mt-8 mb-12 hidden justify-center items-center gap-4 w-full">
+        <button id="prevPageBtn" class="px-4 py-2 rounded-lg font-semibold transition-colors bg-gray-700 text-gray-500 cursor-not-allowed">
+            <i class="fas fa-chevron-left mr-1"></i> ก่อนหน้า
+        </button>
+        <span id="pageInfo" class="text-gray-300 font-medium bg-gray-800 px-4 py-2 rounded-lg border border-gray-700">หน้า 1</span>
+        <button id="nextPageBtn" class="px-4 py-2 rounded-lg font-semibold transition-colors bg-blue-600 hover:bg-blue-500 text-white">
+            ถัดไป <i class="fas fa-chevron-right ml-1"></i>
+        </button>
+    </div>
+    <div id="gameModal" class="fixed inset-0 bg-black/90 hidden z-50 flex items-center justify-center p-4 md:p-10 backdrop-blur-sm transition-opacity">
+        <div class="bg-gray-800 rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto border border-gray-700 shadow-2xl relative flex flex-col">
+            <button id="closeModalBtn" class="absolute top-4 right-4 bg-red-500 hover:bg-red-600 text-white w-10 h-10 rounded-full text-xl font-bold z-10 transition-colors shadow-lg">&times;</button>
+            
+            <div id="modalContent" class="text-white">
+                </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

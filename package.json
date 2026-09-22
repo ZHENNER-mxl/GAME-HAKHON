@@ -1,0 +1,8 @@
+{
+  "name": "game-hakhon",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "algoliasearch": "^5.51.0"
+  }
+}
